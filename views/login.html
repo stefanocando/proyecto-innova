@@ -13,6 +13,7 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./../styles/style.css">
+    <link rel="stylesheet" href="./../styles/styleForm.css">
 
 </head>
 <body>
@@ -49,16 +50,18 @@
     <br>
     <br>
     <br>
-    <h1 class="heading"> Restaurant nombre xd </h1>
+    <h1 class="heading"> Empieza a usar a COMA!</h1>
 
     <div class="row">
-
-        <form id="form">
-            <input name="username" type="text">
-            <input name="password" type="password">
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-
+        <div class="contenedorForm">
+            <h2>Iniciar Sesión</h2>
+            <form id="form" method="post" name="form" onsubmit="return
+             login()">
+                <input name="username" type="text" placeholder="Usuario" required>
+                <input name="password" type="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
     </div>
 
 <section>
@@ -71,51 +74,21 @@
 
 <section class="footer">
 
-    <div class="credit"> copyright @ 2021 by <span>mr. web designer</span> </div>
+    <div class="credit"> copyright @ 2022 by <span>Grupo 58</span> </div>
 
 </section>
 
 <!-- footer section ends -->
 
 <!-- loader part  -->
-<div class="loader-container">
-    <img src="images/loader.gif" alt="">
-</div>
-
-<script>
-    const form = document.getElementById('form');
-    let pedidos;
-    let user;
-    let password;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const payload = new FormData(form)
 
 
-        fetch('http://httpbin.org/post', {
-            method: "post",
-            body: payload,
-        })
-            .then(res => res.json())
-            .then(data => localStorage.setItem('user', data["form"]["username"]))
-            .then(window.location.replace("file://wsl%24/Ubuntu-20.04/home/stefanocando/proyecto-innova/views/index.html"))
-            // .then(form.style['display'] = 'none')
-            // .then(setInterval(actualizarPedidos, 1500, user, password))
-            .catch(err => console.log(err));
-    })
-
-    function actualizarPedidos(usuario, clave) {
-        console.log("actualizando pedidos")
-    }
-
-</script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
 <script src="../scripts/script.js"></script>
+<script src="../scripts/login.js"></script>
 
 </body>
 </html>
