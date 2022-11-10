@@ -5,6 +5,47 @@
     margin-top:100px ;
 
 }
+
+.checkboxes{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.checkboxes div{
+    margin: 10px;
+}
+.checkboxes div label{
+    cursor: pointer;
+}
+
+.checkboxes div label input[type="checkbox"]{
+    display: none;
+}
+
+.checkboxes div label span{
+    position: relative;
+    display: inline-block;
+    background-color: #e88504;
+    padding: 15px 30px;
+    color: white;
+    text-shadow:0 1px 4px rgba(0, 0, 0, .5) ;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: .5s;
+    user-select: none;
+    overflow: hidden;
+}
+
+
+
+.checkboxes div label input[type="checkbox"]:checked ~ span{
+    background: #503102;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
 .contenedor img{
     width: 180px;
     margin-top: 10px;
