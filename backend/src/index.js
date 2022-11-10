@@ -1,9 +1,9 @@
 const app = require('./app');
-const orm = require('./models');
+const db = require('./models');
 
 const PORT = process.env.PORT || 5000;
 
-orm.sequelize
+db.sequelize
   .authenticate()
   .then(() => {
     console.log('Connection to the database has been established successfully.');
