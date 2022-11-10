@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMA</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./../styles/style.css">
+
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<header>
+
+    <a href="#" class="logo">COMA.</a>
+
+    <nav class="navbar">
+        <a class="active" href="#home">Inicio</a>
+        <a href="#menu">menu</a>
+        <a href="#order">Pedido</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <!-- <a href="#" class="fas fa-shopping-cart"></a> -->
+    </div>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+<section></section>
+
+<section class="about" id="home">
+
+    <br>
+    <br>
+    <br>
+    <h1 class="heading"> FORK </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="data:image/png;base64,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" alt="">
+        </div>
+
+        <div class="content">
+            <h3></h3>
+            <p>Fork es una tienda que busca entregarle a las personas una opción saludable, de calidad, variada, rápida y accesible. Todo esto se basa en recetas innovadoras, selección de los mejores ingredientes y un equipo de chef de nivel mundial. Fork es la solución para quienes no tienen tiempo pero sí valoran mucho la comida de calidad. Encuéntranos en nuestra web, aplicación móvil o nuestras tiendas.</p>
+            <p></p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h1 class="heading"> Nuestro menú </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP05099-ensalada-acevichada-camarones-frontal-packaging-830-1664219838129.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Ensalada Acevichada</h3>
+                <p>Mix de hojas verdes, camotes asados, cebolla morada encurtida, choclo peruano, camarones cocinados con ají amarillo y salsa acevichada.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$6.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP03052-ensalada-pasta-pesto-queso-fresco-frontal-packaging-830-1664219680054.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Ensalada de pasta pesto</h3>
+                <p>Ensalada con base de hojas verdes, pasta granizo con pesto de perejil y cítricos. Tomate cherry, almendras tostadas, queso fresco con vinagreta de balsámico y aceite de oliva.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$5.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01179-fetuccini-pollo-jamon-pt-packaging-frontal-830-1656735841387.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Fetuccini alfredo</h3>
+                <p>De pasta artesanal, fresca y teñida de cúrcuma, pechuga de pollo marinada en hierbas y mostaza. Todo acompañado de una salsa natural de bechamel y jamón artesanal asado.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$5.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01014-salmon-finas-hierbas-taboulet-quinoa-map-frontal-1604334791401.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Salmón a las finas hierbas</h3>
+                <p>Salmón cocinado a baja temperatura. Acompañado de un taboulet de quinoa y ratatouille. Arriba sumamos mantequilla artesanal con toques cítricos a las finas hierbas, para que se derrita.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$7.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01181-carne-jugo-pure-garbanzos-merken-packaging-frontal-830-1650049118888.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Carne al jugo</h3>
+                <p>Cocinamos la carne por horas a baja temperatura. El puré de garbanzos tiene toques de merkén y topping de mix de semillas, girasol, sésamo blanco y negro.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$6.990</span>
+                <br>    
+                Alto en sodio
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01203-gohan-camarones-frontal-packaging-830-1658508224477.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Gohan camarones</h3>
+                <p>Hecho con camarón y salsa teriyaki, base de arroz de sushi, mix de vegetales (zanahoria, pepino, edamame, cebollín), queso crema con ciboulette y crema de palta.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$5.990</span>
+                <br>    
+                Alto en sodio
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01183-fetuccini-romesco-pimentones-asados-espinacas-pesto-packaging-frontal-830-1650049007322.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Fetuccini romesco</h3>
+                <p>Pasta artesanal al huevo teñida naturalmente con cúrcuma, salsa bechamel y romesco en base a pimentones asados. Espinacas salteadas con aceitunas sevillanas, ricotta importada desde Italia y reggianatto.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$5.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01037-fetuccini-con-camarones-sin-brocoli-map-830-1623855160228.jpg    " alt="">
+            </div>
+            <div class="content">
+                <h3>Fetuccini con camarones</h3>
+                <p>La pasta es creada artesanalmente en Fork y teñida naturalmente con cúrcuma. Además, la acompañamos de camarones en salsa curry verde.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$6.990</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="https://corpora-fork.s3.amazonaws.com/back_img/PTPP01129-aji-gallina-arroz-blanco-frontal-packaging-830-1658350117316.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Ají de gallinas</h3>
+                <p>Este plato estrella de la cocina peruana, es preparada con suprema de pollo desmenuzada en una crema de cúrcuma y ají amarillo, además acompañada de arroz blanco y aceitunas.</p>
+                <!-- <a href="#" class="btn">add to cart</a> -->
+                <span class="price">$5.990</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+    <h3 class="sub-heading"> Pedir ahora </h3>
+
+    <form action="">
+
+        <div class="inputBox">
+            <div class="input">
+                <span>Nombre</span>
+                <input type="text" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="input">
+                <span>Teléfono</span>
+                <input type="number" placeholder="Ingresa tu teléfono">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Dirección</span>
+                <input type="text" placeholder="Ingresa tu dirección"></textarea>
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="input">
+                <span>Comentarios</span>
+                <textarea name="" placeholder="Algo que deberiamos saber sobre tu pedido?" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input">
+                <span>Productos</span>
+                <textarea type="text" placeholder="Ingresa tu pedido"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="order now" class="btn">
+
+    </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="credit"> copyright @ 2021 by <span>mr. web designer</span> </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- loader part  -->
+<div class="loader-container">
+    <img src="images/loader.gif" alt="">
+</div>
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
