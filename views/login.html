@@ -87,6 +87,7 @@
 <script>
     const form = document.getElementById('form');
     let pedidos;
+    let email;
     let user;
     let password;
 
@@ -94,23 +95,23 @@
         e.preventDefault();
 
         const payload = new FormData(form)
+        SERVER_URL = 'http://localhost:8000/loginUser';
+        console.log([payload.get("username"),payload.get("password")])
 
 
-        fetch('http://httpbin.org/post', {
+        fetch(SERVER_URL, {
             method: "post",
-            body: payload,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'   },
+            body: JSON.stringify({
+                user: payload.get("username"),
+                password: payload.get("password"),
+            })
         })
-            .then(res => res.json())
-            .then(data => localStorage.setItem('user', data["form"]["username"]))
-            .then(window.location.replace("displayRestaurants.html"))
-            // .then(form.style['display'] = 'none')
-            // .then(setInterval(actualizarPedidos, 1500, user, password))
+            .then(r => {console.log(r.body)})
             .catch(err => console.log(err));
     })
-
-    function actualizarPedidos(usuario, clave) {
-        console.log("actualizando pedidos")
-    }
 
 </script>
 
