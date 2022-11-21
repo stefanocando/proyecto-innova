@@ -12,14 +12,14 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
-      email: {
+      telephone: {
         type: Sequelize.STRING
       },
       password: {
         type: Sequelize.STRING
       },
       categories: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,
