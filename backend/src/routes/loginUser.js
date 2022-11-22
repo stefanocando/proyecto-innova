@@ -5,31 +5,33 @@ const user = require('../models/user')
 
 
 const router = new Router();
-router.post('usuariosLogin.show', '/', async (ctx) => {
+
+router.post('usuariosLogin.show', '/', async (ctx, next) => {
     const body = ctx.request.body;
-    const usuario = await ctx.orm.User.findOne({
-        username : body.user
-        
+    console.log(body);
+
+    const usuario = await ctx.orm.User.findOne({ where: {
+        username : body.user}
     })
-    console.log(body.user)
-    console.log(usuario.password)
-    console.log(body.password)
+    console.log(usuario);
 
-    const validPassword = await bcrypt.compare("$2b$05$ZdrkzdnvFXRJBhSfQNjgXuRm605oj/KoDa8yRfT8L6r8tG0sjXXPK", usuario.password);
-    console.log(validPassword)
-    if (validPassword) {
-        ctx.body = body.user
-            
-        
-    } else {
-        error = "no"
-        ctx.throw(error)
+    // const validPassword = await bcrypt.compare(body.user, usuario.password);
+    const correct = await bcrypt.compare(body.password, usuario.password)
 
-        
+    console.log(correct)
+    if (correct) {
+        console.log("iniciando sesion!")
+        ctx.response.status = 200;
+        ctx.response.body = {
+            username: usuario.username
+        };
     }
-   
-    
-
+    else {
+        ctx.status = 401;
+        ctx.body = {
+            errors:['incorrecto']
+        }
+    }
 });
 
 module.exports = router;

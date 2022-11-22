@@ -1,4 +1,5 @@
 const Router = require('koa-router');
+const orm = require('../models/index');
 
 const router = new Router();
 
